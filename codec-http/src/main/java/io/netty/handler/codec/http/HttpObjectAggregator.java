@@ -131,6 +131,7 @@ public class HttpObjectAggregator
             throw new Error();
         }
 
+        ret.setDecoderResult(start.decoderResult());
         ret.headers().set(start.headers());
         return ret;
     }
